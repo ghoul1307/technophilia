@@ -1,0 +1,636 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: rgb(11, 11, 12);
+        }
+        
+        @font-face {
+            font-family: "machinegunk";
+            src: url(fonts/Machine\ Gunk.otf);
+        }
+        
+        @font-face {
+            font-family: "bernadette";
+            src: url(fonts/bernadette.ttf);
+        }
+        
+        header .nav ul li a {
+            position: relative !important;
+        }
+        
+        header .nav ul li a:hover {
+            color: white !important;
+            transition: 0.9s !important;
+        }
+        
+        header .nav ul li a:after {
+            content: "" !important;
+            position: absolute !important;
+            left: 50% !important;
+            bottom: 0 !important;
+            transform: translateX(-50%) scaleX(0) !important;
+            -webkit-transform: translateX(-50%) scaleX(0) !important;
+            -webkit-transform-origin: 50% 50% !important;
+            transform-origin: 50% 50% !important;
+            width: 100% !important;
+            height: 3px !important;
+            background-color: rgba(255, 255, 255, 0.9) !important;
+            -webkit-transition: transform 250ms !important;
+            transition: transform 250ms !important;
+        }
+        
+        header .nav ul li a:hover:after {
+            -webkit-transform: translateX(-50%) scaleX(1) !important;
+            transform: translateX(-50%) scaleX(1) !important;
+        }
+        
+        .logo {
+            width: 45px;
+            height: auto;
+        }
+        
+        .btn {
+            border-color: grey;
+            border-radius: 50%;
+        }
+        
+        .btn:hover {
+            color: rgb(59, 59, 59);
+            transition: 0.5s;
+        }
+        
+        .btn:focus {
+            outline: none !important;
+            box-shadow: none;
+        }
+        
+        .form-control:focus {
+            outline: none !important;
+            box-shadow: none;
+        }
+        
+        @font-face {
+            font-family: "ttlakes";
+            src: url(fonts/tt-lakes-condensed-bold-demo.otf);
+        }
+        
+        li {
+            font-family: "ttlakes";
+            font-size: 18px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        .slideshow {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            background-color: black;
+        }
+        
+        .slideshow-item {
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            opacity: 0;
+            animation: fade 41s infinite;
+        }
+        
+        .slideshow-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: zoom 41s infinite;
+        }
+        
+        .slideshow-item:nth-child(1),
+        .slideshow-item:nth-child(1) img {
+            animation-delay: 0s;
+        }
+        
+        .slideshow-item:nth-child(2),
+        .slideshow-item:nth-child(2) img {
+            animation-delay: 10s;
+        }
+        
+        .slideshow-item:nth-child(3),
+        .slideshow-item:nth-child(3) img {
+            animation-delay: 20s;
+        }
+        
+        .slideshow-item:nth-child(4),
+        .slideshow-item:nth-child(4) img {
+            animation-delay: 30s;
+        }
+        
+        .slideshow-item-text {
+            max-width: 50%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5rem 1rem;
+        }
+        
+        @font-face {
+            font-family: "azonix";
+            src: url(fonts/Azonix.otf);
+        }
+        
+        @font-face {
+            font-family: "chapaza";
+            src: url(fonts/Chapaza.ttf);
+        }
+        
+        @font-face {
+            font-family: "cdreams";
+            src: url(fonts/CaviarDreams.ttf);
+        }
+        
+        .slideshow-item-text h5 {
+            font-size: 2.5rem;
+            font-family: "azonix";
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 2.5rem;
+            cursor: default;
+        }
+        
+        .slideshow-item-text p {
+            font-size: 1rem;
+            font-family: "cdreams";
+            letter-spacing: 1px;
+            font-weight: 300;
+            cursor: default;
+        }
+        
+        @keyframes fade {
+            25% {
+                opacity: 1;
+            }
+            40% {
+                opacity: 0;
+            }
+        }
+        
+        @keyframes zoom {
+            100% {
+                transform: scale(1.3);
+            }
+        }
+        
+        @media screen and (max-width: 1000px) {
+            .slideshow-item-text {
+                max-width: 70%;
+                padding: 5rem 1rem;
+            }
+            .slideshow-item-text h5 {
+                font-size: 4rem;
+            }
+        }
+        
+        @media screen and (max-width: 767px) {
+            .slideshow-item-text {
+                max-width: 100%;
+                padding: 2rem;
+                top: initial;
+                bottom: 0;
+                transform: initial;
+            }
+            .slideshow-item-text h5 {
+                font-size: 2rem;
+            }
+            .slideshow-item-text p {
+                font-size: 1.4rem;
+            }
+        }
+        
+        @font-face {
+            font-family: "typographica";
+            src: url("fonts/TypoGraphica_demo.otf");
+        }
+        
+        .ps {
+            padding-left: 20%;
+            padding-right: 20%;
+            padding-bottom: 100px;
+        }
+        
+        .ps h1 {
+            color: rgb(131, 128, 128);
+            font-family: "typographica";
+            padding-bottom: 50px;
+        }
+        
+        .logocover a {
+            position: relative;
+            display: inline-block;
+            padding: 15px 30px;
+            color: #2196f3;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-decoration: none;
+            font-size: 20px;
+            overflow: hidden;
+            transition: 0.2s;
+        }
+        
+        .logocover a:hover {
+            color: #255784;
+            background: #2196f3;
+            box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+        }
+        
+        .console img {
+            height: auto;
+            width: 50%;
+            max-width: 100%;
+        }
+        
+        .about {
+            height: 800px;
+            width: auto;
+            background: url(images/Cover3.gif) no-repeat center center fixed;
+            background-size: cover;
+        }
+        
+        .leftpart {
+            max-width: 50%;
+            color: white;
+            padding: 50px;
+        }
+        
+        .leftpart h1 {
+            font-family: "cdreams";
+        }
+        
+        .widget {
+            text-align: center;
+            padding-bottom: 75px;
+            padding-top: 75px;
+        }
+        
+        .widgetinfo {
+            padding: 60px;
+        }
+        
+        .widgetinfo h1 {
+            color: rgb(206, 206, 206);
+            font-family: "azonix";
+        }
+        
+        .widgetinfo p {
+            color: rgb(206, 206, 206);
+            padding-top: 50px;
+            font-size: 20px;
+            font-family: "cdreams";
+        }
+        
+        .banner {
+            width: 100%;
+            height: 720px;
+            background: url("images/EventsCover.png");
+            background-size: cover;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+        .banner-text {
+            background-color: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 75px;
+            color: white;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .banner-text h5 {
+            font-size: 60px;
+            font-family: "devil breeze";
+            font-family: "cgames";
+            letter-spacing: 6px;
+            text-transform: uppercase;
+        }
+        
+        .banner-text p {
+            font-size: 25px;
+            font-family: sans-serif;
+            letter-spacing: 2px;
+            font-family: "cdreams";
+            padding-top: 15px;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .banner-text {
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding: 20px;
+                width: 100%;
+            }
+            .banner-text h5 {
+                font-size: 45px;
+            }
+            .banner-text p {
+                font-size: 15px;
+            }
+        }
+        
+        @font-face {
+            font-family: "avalon";
+            src: url(fonts/Avalon.ttf);
+        }
+        
+        @font-face {
+            font-family: "cgames";
+            src: url(fonts/Corporation\ Games\ Straight.otf);
+        }
+        
+        @font-face {
+            font-family: "autotechno";
+            src: url(fonts/auto-techno.ttf);
+        }
+        
+        @font-face {
+            font-family: "nosurrender";
+            src: url(fonts/No\ Surrender.otf);
+        }
+        
+        @font-face {
+            font-family: "devil breeze";
+            src: url(fonts/Devil\ Breeze\ Demi.ttf);
+        }
+        
+        .d-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            flex-wrap: wrap;
+            padding: 75px;
+        }
+        
+        .d-container .card {
+            position: relative;
+            max-width: 300px;
+            height: 150px;
+            margin: 30px 10px;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s ease-in-out;
+        }
+        
+        .d-container .card:hover {
+            height: 450px;
+        }
+        
+        .d-container .card .imge {
+            position: relative;
+            width: 260px;
+            height: 260px;
+            top: -60px;
+            left: 5px;
+            box-shadow: 0 5px 20px rgb(0, 0, 0, 0.5);
+        }
+        
+        .d-container .card .imge img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        
+        .d-container a,
+        .r-container a {
+            border-radius: 50px !important;
+            outline: none !important;
+            border: none !important;
+        }
+        
+        .d-container a:hover,
+        .r-container a:hover {
+            -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2);
+            color: white;
+        }
+        
+        .d-container .card .content {
+            position: relative;
+            margin-top: -140px;
+            padding: 10px 15px;
+            text-align: center;
+            color: #111;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+        }
+        
+        .d-container .card .content p {
+            font-size: 18px;
+        }
+        
+        .d-container .card:hover .content {
+            visibility: visible;
+            opacity: 1;
+            margin-top: -40px;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .d-container {
+                display: none;
+            }
+        }
+        
+        @media screen and (min-width: 768px) {
+            .r-container {
+                display: none !important;
+            }
+        }
+        
+        .r-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            flex-wrap: wrap;
+            padding: 75px;
+        }
+        
+        .r-container .r-card {
+            padding: 15px;
+            padding-top: 50px;
+        }
+        
+        .r-container .card {
+            padding: 8px;
+        }
+        
+        @font-face {
+            font-family: "avalon";
+            src: url(fonts/Avalon.ttf);
+        }
+        
+        .about-us {
+            padding-top: 20px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .about-container {
+                padding: 25px 30px !important;
+            }
+        }
+        
+        .about-us h1 {
+            padding: 15px;
+            font-size: 45px;
+            font-family: "cdreams";
+        }
+        
+        .about-container {
+            padding: 100px 300px;
+            line-height: 30px;
+        }
+        
+        .about-container p {
+            text-align: center;
+            color: white;
+            font-family: "cdreams";
+        }
+        
+        .team {
+            color: rgb(230, 230, 230);
+            padding: 50px 40px !important;
+            font-family: "cdreams";
+        }
+        
+        .reg-banner {
+            width: 100%;
+            height: 720px;
+            background: url("images/reg-cover.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .reg-banner-text {
+            background-color: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 75px;
+            color: white;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .reg-banner-text h5 {
+            font-size: 60px;
+            font-family: "devil breeze";
+            font-family: "cgames";
+            letter-spacing: 6px;
+            text-transform: uppercase;
+        }
+        
+        .reg-banner-text p {
+            font-size: 25px;
+            font-family: sans-serif;
+            letter-spacing: 2px;
+            font-family: "cdreams";
+            padding-top: 15px;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .reg-banner {
+                width: 100%;
+                height: 600px;
+            }
+            .reg-banner-text {
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding: 20px;
+                width: 100%;
+            }
+            .reg-banner-text h5 {
+                font-size: 30px;
+            }
+            .reg-banner-text p {
+                font-size: 15px;
+            }
+        }
+        
+        .table-container {
+            padding: 50px;
+            color: white;
+        }
+        
+        .content-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            min-width: 1200px;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .content-table thead tr {
+            background-color: #5ea2ef;
+            color: #ffffff;
+            text-align: center;
+            font-weight: bold;
+            font-family: "azonix"
+        }
+        
+        .content-table tbody tr:nth-of-type(odd):hover {
+            background-color: rgb(230, 230, 230, 0.05);
+            transition: 0.2s;
+        }
+        
+        .content-table tbody tr:nth-of-type(even):hover {
+            background-color: rgba(94, 162, 239, 0.5);
+            transition: 0.2s;
+        }
+        
+        .content-table th,
+        .content-table td {
+            padding: 12px 15px;
+            font-size: 20px;
+        }
+        
+        .content-table td {
+            font-size: 15px;
+            text-align: center;
+            font-family: "cdreams";
+        }
+        
+        .content-table td a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .content-table tbody tr:nth-of-type(even) {
+            background-color: rgba(94, 162, 239, 0.4);
+            color: white;
+        }
+        
+        .content-table tbody tr:last-of-type {
+            border-bottom: 2px solid rgba(94, 162, 239, 0.6);
+        }
