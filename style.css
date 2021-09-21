@@ -64,7 +64,7 @@
         
         .btn:hover {
             color: rgb(59, 59, 59);
-            transition: 0.5s;
+            transition: 0.2s;
         }
         
         .btn:focus {
@@ -229,8 +229,9 @@
         
         .ps h1 {
             color: rgb(131, 128, 128);
-            font-family: "typographica";
+            font-family: "cdreams";
             padding-bottom: 50px;
+            font-size: 30px;
         }
         
         .logocover a {
@@ -259,20 +260,116 @@
         }
         
         .about {
-            height: 800px;
-            width: auto;
-            background: url(images/Cover3.gif) no-repeat center center fixed;
+            background: url(images/Cover3.gif) center fixed;
             background-size: cover;
         }
         
-        .leftpart {
-            max-width: 50%;
+        .testimonial {
+            font-family: "cdreams";
+            padding: 80px 0;
             color: white;
-            padding: 50px;
         }
         
-        .leftpart h1 {
-            font-family: "cdreams";
+        .testimonial a {
+            color: white;
+        }
+        
+        .testimonial i {
+            padding: 20px;
+        }
+        
+        .sec-heading {
+            margin-bottom: 60px;
+        }
+        
+        .sec-heading h6 {
+            font-weight: 900;
+            font-size: 80px;
+        }
+        
+        .single-box {
+            padding: 50px 30px 40px;
+        }
+        
+        .img-area {
+            margin: 45px 0 20px;
+        }
+        
+        .single-box img {
+            max-width: 175px;
+            margin: 0 auto
+        }
+        
+        .single-box h4 {
+            font-weight: 600;
+            margin: 0;
+            font-size: 35px;
+        }
+        
+        .single-box {
+            overflow: visible
+        }
+        
+        .single-box p {
+            margin: 10px 0 25px;
+            line-height: 2;
+        }
+        
+        .testi-carousel-three .single-box {
+            border: 0;
+            padding: 0 50px;
+        }
+        
+        .testi-carousel .owl-dots,
+        .clients-carousel .owl-dots,
+        .testi-carousel-three .owl-dots {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -60px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .testi-carousel .owl-dot,
+        .clients-carousel .owl-dot,
+        .testi-carousel-three .owl-dot {
+            width: 16px;
+            height: 16px;
+            background-color: #ddd;
+            display: inline-block;
+            margin: 0 6px;
+            text-align: center;
+            border-radius: 50%;
+        }
+        
+        .testi-carousel .owl-dot.active,
+        .clients-carousel .owl-dot.active,
+        .testi-carousel-three .owl-dot.active {
+            background-color: #5ea2ef;
+        }
+        
+        @media only screen and (min-width: 360px) and (max-width: 479px) {
+            .testimonial {
+                padding: 70px 0 130px;
+            }
+        }
+        
+        @media only screen and (min-width: 320px) and (max-width: 359px) {
+            .testimonial {
+                padding: 70px 0 130px;
+            }
+            .single-box {
+                padding: 50px 0 40px;
+            }
+            .single-box .img-area {
+                width: 100%;
+                float: none;
+            }
+            .single-box .content {
+                width: 100%;
+                float: none;
+            }
         }
         
         .widget {
@@ -303,7 +400,7 @@
             background: url("images/EventsCover.png");
             background-size: cover;
             background-attachment: fixed;
-            background-size: cover;
+            position: relative;
         }
         
         .banner-text {
@@ -312,7 +409,7 @@
             padding: 75px;
             color: white;
             position: absolute;
-            top: 60%;
+            top: 50%;
             left: 50%;
             width: 100%;
             transform: translate(-50%, -50%);
@@ -335,6 +432,9 @@
         }
         
         @media screen and (max-width: 767px) {
+            .banner {
+                background-size: auto !important;
+            }
             .banner-text {
                 padding-top: 30px;
                 padding-bottom: 30px;
@@ -521,12 +621,17 @@
             font-family: "cdreams";
         }
         
+        .team .col-md-6 {
+            padding: 0px 50px !important;
+        }
+        
         .reg-banner {
             width: 100%;
             height: 720px;
             background: url("images/reg-cover.jpg");
             background-size: cover;
             background-attachment: fixed;
+            position: relative;
         }
         
         .reg-banner-text {
@@ -535,7 +640,7 @@
             padding: 75px;
             color: white;
             position: absolute;
-            top: 60%;
+            top: 50%;
             left: 50%;
             width: 100%;
             transform: translate(-50%, -50%);
@@ -560,7 +665,7 @@
         @media screen and (max-width: 767px) {
             .reg-banner {
                 width: 100%;
-                height: 600px;
+                height: 800px;
             }
             .reg-banner-text {
                 padding-top: 30px;
@@ -577,13 +682,23 @@
         }
         
         .table-container {
-            padding: 50px;
+            padding: 70px;
             color: white;
+            display: flex;
+            justify-content: center;
+        }
+        
+        @media screen and (max-width: 1200px) {
+            .table-container {
+                display: visible !important;
+                margin: 23px !important;
+                padding: 0 !important;
+                justify-content: unset !important;
+            }
         }
         
         .content-table {
             border-collapse: collapse;
-            margin: 25px 0;
             font-size: 0.9em;
             min-width: 1200px;
             border-radius: 5px 5px 0 0;
