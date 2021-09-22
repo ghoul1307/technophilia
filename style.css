@@ -233,7 +233,11 @@
             padding-bottom: 50px;
             font-size: 30px;
         }
-        
+        @media screen and (max-width: 767px) {
+            .ps h1 {font-size: 20px;
+            padding-top: 30px;}
+            }
+            
         .logocover a {
             position: relative;
             display: inline-block;
