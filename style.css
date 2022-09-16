@@ -231,7 +231,7 @@
             color: rgb(131, 128, 128);
             font-family: "cdreams";
             padding-bottom: 50px;
-            font-size: 30px;
+            font-size: 24px;
         }
         @media screen and (max-width: 767px) {
             .ps h1 {font-size: 20px;
@@ -246,15 +246,15 @@
             text-transform: uppercase;
             letter-spacing: 4px;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 12px;
             overflow: hidden;
             transition: 0.2s;
+            margin: 0px 50px;
         }
-        
         .logocover a:hover {
             color: #255784;
             background: #2196f3;
-            box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+            box-shadow: 0 0 5px #2196f3, 0 0 20px #2196f3, 0 0 40px #2196f3;
         }
         
         .console img {
@@ -264,7 +264,7 @@
         }
         
         .about {
-            background: url(images/Cover3.gif) center fixed;
+            background: url(images/Cover3.gif) center;
             background-size: cover;
         }
         
