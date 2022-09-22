@@ -249,7 +249,7 @@
             font-size: 12px;
             overflow: hidden;
             transition: 0.2s;
-            margin: 0px 50px;
+            margin: 0px 15px;
         }
         .logocover a:hover {
             color: #255784;
@@ -257,6 +257,20 @@
             box-shadow: 0 0 5px #2196f3, 0 0 20px #2196f3, 0 0 40px #2196f3;
         }
         
+                
+        @media screen and (max-width: 767px) {
+            .x-container {
+                display: none !important;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .y-container {
+                display: none !important;
+            }
+            
+        }
+
         .console img {
             height: auto;
             width: 50%;
@@ -553,9 +567,10 @@
             opacity: 1;
             margin-top: -40px;
         }
-        
+
         @media screen and (max-width: 767px) {
             .d-container {
+                
                 display: none;
             }
         }
